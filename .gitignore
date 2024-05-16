@@ -1,0 +1,10 @@
+# Ignore compiled binaries
+*.exe
+*.dll
+
+# Ignore log files
+*.log
+
+# Ignore directories
+/tmp/
+/node_modules/
