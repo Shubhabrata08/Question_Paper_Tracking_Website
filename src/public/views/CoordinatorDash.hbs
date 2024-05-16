@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinator Dashboard</title>
+    <link rel="stylesheet" href="/css/CoordinatorDash.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Coordinator Dashboard</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Semester</th>
+                    <th>Year</th>
+                    <th>Question Paper</th>
+                    <th>Submission Status</th>
+                    <th>Check Submission</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each hodAssigns}}
+                    <tr>
+                        <td>{{this.teacherName}}</td>
+                        <td>{{this.teacherEmail}}</td>
+                        <td>{{this.teacherDepartment}}</td>
+                        <td>{{this.semester}}</td>
+                        <td>{{this.year}}</td>
+                        <td>{{this.questionPaper}}</td>
+                        <td>{{this.submissionStatus}}</td>
+                        <td>
+                            <form action="/checkSubmission" method="POST">
+                                <input type="hidden" name="teacherEmail" value="{{this.teacherEmail}}">
+                                <input type="checkbox" name="isChecked" {{#if this.submissionStatus}} checked {{/if}}>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <button type="button"><a href="/home">Back to Home</a></button>
+    </div>
+</body>
+</html>

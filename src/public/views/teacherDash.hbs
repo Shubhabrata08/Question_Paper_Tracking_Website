@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="/css/teacherDash.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        
+        <div class="teacher-info">
+            <p><strong>Name:</strong> {{teacherInfo.teacherName}}</p>
+            <p><strong>Email:</strong> {{teacherInfo.teacherEmail}}</p>
+            <p><strong>Department:</strong> {{teacherInfo.teacherDepartment}}</p>
+            <p><strong>Semester:</strong> {{teacherInfo.semester}}</p>
+            <p><strong>Year:</strong> {{teacherInfo.year}}</p>
+        </div>
+        
+        <form action="/uploadQuestionPaper" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="questionPaper">Upload Question Paper:</label>
+                <input type="file" id="questionPaper" name="questionPaper" required>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+        {{#if submissionStatus}}
+        <div class="submission-status">
+            <p>{{submissionStatus}}</p>
+        </div>
+        {{/if}}
+    </div>
+</body>
+</html>

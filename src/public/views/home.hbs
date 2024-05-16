@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Home</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Question Paper Tracking System</h1>
+        <img src="/css/logo.png" alt="Logo" class="logo">
+        <div class="buttons">
+            <a href="/teacherLogin" class="btn">Login as Teacher</a>
+            <a href="/hodLogin" class="btn">Login as HOD</a>
+            <a href="/CoordinatorLogin" class="btn">Login as Coordinator</a>
+        </div>
+        {{#if successMessage}}
+            <div class="alert alert-success">
+                {{successMessage}}
+            </div>
+        {{/if}}
+    </div>
+</body>
+</html>

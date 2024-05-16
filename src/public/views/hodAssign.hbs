@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/hodDash.css">
+
+    <title>HOD Dashboard</title>
+</head>
+<body>
+    <h1>HOD Dashboard</h1>
+    <form action="/hodAssign" method="POST">
+        <div class="form-group">
+            <label for="teacherName">Teacher Name:</label>
+            <input type="text" id="teacherName" name="teacherName" required>
+        </div>
+        <div class="form-group">
+            <label for="teacherEmail">Teacher Email:</label>
+            <input type="email" id="teacherEmail" name="teacherEmail" required>
+        </div>
+        <div class="form-group">
+            <label for="teacherPassword">Teacher Password:</label>
+            <input type="password" id="teacherPassword" name="teacherPassword" required>
+        </div>
+        <div class="form-group">
+            <label for="teacherDepartment">Teacher Department:</label>
+            <input type="text" id="teacherDepartment" name="teacherDepartment" required>
+        </div>
+        <div class="form-group">
+            <label for="semester">Semester:</label>
+            <input type="text" id="semester" name="semester" required>
+        </div>
+        <div class="form-group">
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
