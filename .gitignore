@@ -1,10 +1,23 @@
-# Ignore compiled binaries
-*.exe
-*.dll
+/config/database.yml
 
-# Ignore log files
-*.log
+/.env
+/log/
 
-# Ignore directories
-/tmp/
+*.swp
+.DS_Store
+Thumbs.db
+
 /node_modules/
+/vendor/
+
+/tmp/
+.temp/
+
+.idea/
+.vscode/
+
+/secrets/
+
+/public/assets/
+
+*.bak
